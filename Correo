@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang= "es" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar Correo Electrónico</title>
+  <script>
+    function validarCorreoElectronico() {
+      // Obtener el valor del campo de texto
+      var cadena = document.getElementById("correo").value;
+
+      // Verificar si la cadena contiene '@' y tiene una terminación válida
+      if (cadena.includes('@') && (cadena.endsWith('.com') || cadena.endsWith('.com.mx') || cadena.endsWith('.mx'))) {
+        alert("La cadena ingresada es un correo electrónico válido.");
+      } else {
+        alert("La cadena ingresada NO es un correo electrónico válido.");
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Verificar Correo Electrónico</h2>
+
+  <label for="correo">Ingrese una cadena de texto:</label>
+  <input type="text" id="correo" name="correo" required>
+
+  <button onclick="validarCorreoElectronico()">Verificar</button>
+
+</body>
+</html>
